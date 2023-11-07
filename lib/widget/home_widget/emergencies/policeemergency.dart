@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 class PoliceEmergency extends StatelessWidget {
+
+  Future<void> callNumber(String number) async {
+    bool? res = await FlutterPhoneDirectCaller.callNumber(number);
+    if (res != null && res) {
+
+    } else {
+
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return InkWell(
+      onTap: ()=> callNumber('100'),
+        child:Card(
       elevation: 5.0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
@@ -47,7 +59,7 @@ class PoliceEmergency extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: 12,
                       ),
                     ),
                     SizedBox(height: 8),
@@ -55,7 +67,7 @@ class PoliceEmergency extends StatelessWidget {
                       "Call 1-0-0 in case of emergency",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10,
+                        fontSize: 8,
                       ),
                     ),
                     SizedBox(height: 8),
@@ -63,7 +75,7 @@ class PoliceEmergency extends StatelessWidget {
                       "Tap here",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10,
+                        fontSize: 8,
                       ),
                     )
                   ],
@@ -73,6 +85,7 @@ class PoliceEmergency extends StatelessWidget {
           ),
         ),
       ),
+    )
     );
   }
 }

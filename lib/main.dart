@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:vara/app_screen/home_screen.dart';
+import 'package:vara/child/bottom_screen/child_home_screen.dart';
+import 'package:vara/child//login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:vara/db/shared_pref.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vara/parent/parent_homescreen.dart';
+import 'package:vara/db/shared_pref.dart';
+import 'package:vara/child/bottom_page.dart';
+import 'package:vara/parent/parent_homescreen.dart';
 
-void main() {
+
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await MySharedPrefences.init();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,13 +31,17 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.firaSansExtraCondensedTextTheme(
           Theme.of(context).textTheme,
         ),
-
-
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen()
-      ,
+      home: MySharedPrefences.getUserType() == 'child'
+          ? BottomPage()
+          : (MySharedPrefences.getUserType() == 'parent'
+          ? BottomPage()
+          : LoginScreen()),
     );
   }
 }
+
+
+
 

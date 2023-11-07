@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063191860619",
+    "project_id": "vara-sos",
+    "storage_bucket": "vara-sos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063191860619:android:7d427d62b2ba025a120b8e",
+        "android_client_info": {
+          "package_name": "com.example.vara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063191860619-ig3uqv1ge16g0enotosjk71uh2jqas75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhU06MtQRsfXDavdHzhTFrPKXIJc2kiO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063191860619-ig3uqv1ge16g0enotosjk71uh2jqas75.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

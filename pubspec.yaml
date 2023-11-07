@@ -39,11 +39,29 @@ dependencies:
   carousel_slider: ^4.2.1
   url_launcher: ^6.1.10
   toast: ^0.3.0
+  fluttertoast: ^8.2.2
   location: ^4.3.0
+  flutter_phone_direct_caller: ^2.1.1
+  background_sms: ^0.0.4
+  geolocator: ^10.0.0
+  geocoding: ^2.1.0
+  firebase_core: ^2.5.0
+  firebase_auth: ^4.8.0
+  cloud_firestore: ^4.9.0
+  shared_preferences: ^2.2.0
+  permission_handler: ^10.4.3
+  contacts_service: ^0.6.3
+  sqflite: ^2.3.0
+  firebase_storage: ^11.2.6
+  image_picker: ^1.0.2
+  shake: ^2.2.0
+  telephony: ^0.2.0
+  camera: ^0.10.5+4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -70,6 +88,22 @@ flutter:
     - images/logo3.png
     - images/logo2.png
     - images/fire.png
+    - lib/images/sendlocation.png
+    - lib/images/logo.png
+    - images/avatarlogo.png
+    - images/profilepics/profile1.jpeg
+    - images/profilepics/profile2.jpeg
+    - images/profilepics/profile3.jpeg
+    - images/profilepics/profile4.jpeg
+    - images/post_images/post1.jpeg
+    - images/post_images/post2.jpg
+    - images/post_images/post3.jpeg
+    - images/post_images/post4.jpg
+    - images/post_images/post4.jpg
+
+
+
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

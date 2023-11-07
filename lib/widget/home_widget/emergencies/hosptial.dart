@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 
 class Hospital extends StatelessWidget {
+  Future<void> callNumber(String number) async {
+    bool? res = await FlutterPhoneDirectCaller.callNumber(number);
+    if (res != null && res) {
+
+    } else {
+
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return  InkWell(
+        onTap: ()=>callNumber('12'),
+    child:Card(
       elevation: 5.0,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20),
@@ -43,7 +55,7 @@ class Hospital extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Alert women safety wing",
+                      "Alert women safety ",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -55,7 +67,7 @@ class Hospital extends StatelessWidget {
                       "Call 1-0-8-0 in case of emergency",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10,
+                        fontSize: 8,
                       ),
                     ),
 
@@ -64,7 +76,7 @@ class Hospital extends StatelessWidget {
                       "Direct me",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10,
+                        fontSize: 8,
                       ),
                     )
                   ],
@@ -74,6 +86,7 @@ class Hospital extends StatelessWidget {
           ),
         ),
       ),
+    )
     );
   }
 }
